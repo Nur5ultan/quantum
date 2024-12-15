@@ -1,0 +1,104 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "console_title_template": "{{ .Folder }}",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "windows": "\ue62a"
+          },
+          "leading_diamond": "\u256d\u2500\ue0b2",
+          "template": " {{ if .WSL }}\ue712 on {{ end }}{{ .Icon }} ",
+          "foreground": "#00A4EF",
+          "powerline_symbol": "\ue0b0",
+          "background": "#4b4b4b",
+          "type": "os",
+          "style": "powerline"
+        },
+        {
+          "template": "\ueb99 {{ .UserName }}",
+          "foreground": "#45F1C2",
+          "powerline_symbol": "\ue0b0",
+          "background": "#444444",
+          "type": "session",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "style": "folder"
+          },
+          "template": " {{ if eq .Path \"~\" }}\ueb06 {{ else }}\ue5fe {{ .Path }}{{ end }}",
+          "foreground": "#FCD757",
+          "powerline_symbol": "\ue0b0",
+          "background": "#5a5a5a",
+          "type": "path",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "branch_icon": "",
+            "fetch_upstream_icon": false
+          },
+          "template": "{{ if eq .HEAD \"main\" }} <#FF7F50>\ue702 {{ .HEAD }}</>{{ else }} <#228B22>\ue709 {{ .HEAD }}</>{{ end }}",
+          "foreground": "#FF7F50",
+          "powerline_symbol": "\ue0b0",
+          "background": "#4d4d4d",
+          "type": "git",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "display_mode": "files",
+            "fetch_virtual_env": true
+          },
+          "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "foreground": "#3776AB",
+          "powerline_symbol": "\ue0b0",
+          "background": "#3b3b3b",
+          "type": "python",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "fetch_version": false
+          },
+          "template": " \ue626 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "foreground": "#00ADD8",
+          "powerline_symbol": "\ue0b0",
+          "background": "#3A3A3A",
+          "type": "go",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "display_mode": "files",
+            "fetch_version": false
+          },
+          "template": " \ue791 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "foreground": "#CC342D",
+          "powerline_symbol": "\ue0b0",
+          "background": "#3A3A3A",
+          "type": "ruby",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "display_mode": "files",
+            "fetch_version": false
+          },
+          "template": " \ue7a8 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "foreground": "#FF4785",
+          "powerline_symbol": "\ue0b0",
+          "background": "#3A3A3A",
+          "type": "rust",
+          "style": "powerline"
+        }
+      ]
+    }
+  ],
+  "version": 3,
+  "final_space": true
+}
