@@ -30,6 +30,18 @@
 - Установленный Oh My Posh
 - Nerd Font (для корректного отображения значков)
 
+## GitHub репозиторий
+
+Тема доступна в GitHub репозитории:
+```
+https://github.com/Nur5ultan/quantum
+```
+
+Вы можете клонировать репозиторий:
+```bash
+git clone https://github.com/Nur5ultan/quantum
+```
+
 ## Установка
 
 1. Скопируйте файл `quantum.omp.json` в директорию с темами Oh My Posh:
